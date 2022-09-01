@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background: #3f5252;
+  color: #f1f5f4;
+  padding: 20px 20px 0 20px;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav .language {
+  display: none;
+}
+.header__logo-link, .header__logo {
+  width: 123px;
+  height: 40px;
+}
+.header .burger__item {
+  height: 2px;
+  width: 25px;
+  background: #f1f5f4;
+}
+.header .burger__item:nth-child(2) {
+  margin: 7px 0;
+}
+.header__menu {
+  display: none;
+}
+.header .title {
+  margin-top: 70px;
+}
+.header .title__sub {
+  font-size: 14px;
+}
+.header .title__text {
+  font-size: 48px;
+  margin: 10px 0 30px;
+}
+.header__btn {
+  margin: 40px auto;
+  padding: 22px 0;
+  width: 280px;
+  text-align: center;
+  background: #cd4d31;
+  font-weight: 600;
+}
+.header__img {
+  margin: 0 auto;
+  width: 245px;
+  height: 273px;
+  background-image: url("/src/images/header-tab.png");
+  background-size: cover;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+html h1, html h2, html h3 {
+  font-family: "Playfair Display", serif;
+}
+
+/*# sourceMappingURL=style.css.map */

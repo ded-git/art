@@ -1,0 +1,71 @@
+@import '../utils/variables.scss';
+
+.header {
+    background: $bg-darkgrey;
+    color: $color-white;
+    padding: 20px 20px 0 20px;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .language {
+            display: none;
+        }
+    }
+    
+    &__logo-link, &__logo {
+        width: 123px;
+        height: 40px;
+    }
+
+    
+    .burger {
+        &__item {
+            height: 2px;
+            width: 25px;
+            background: $color-white;
+        }
+        &__item:nth-child(2) {
+            margin: 7px 0;
+        }
+    }
+
+    &__menu {
+        display: none;
+    }
+    .title {
+        margin-top: 70px;
+
+        &__sub {
+            font-size: 14px;
+        }
+
+        &__text {
+            font-size: 48px;
+            margin: 10px 0 30px;
+        }
+
+        &__description {
+        }
+        
+    }
+
+    &__btn {
+        margin: 40px auto;
+        padding: 22px 0;
+        width: 280px;
+        text-align: center;
+        background: $btn-bg;
+        font-weight: 600;
+    }
+
+    &__img {
+        margin: 0 auto;
+        width: 245px;
+        height: 273px;
+        background-image: url('/src/images/header-tab.png');
+        background-size: cover;
+    }
+
+}
