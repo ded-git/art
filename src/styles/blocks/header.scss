@@ -1,16 +1,51 @@
-@import '../utils/variables.scss';
+
 
 .header {
+
     background: $bg-darkgrey;
     color: $color-white;
-    padding: 20px 20px 0 20px;
+    
+    .container {
+        max-width: 1170px;
+        padding: 0 20px;
+        margin: 0 auto;
+
+        @include onTablet{
+            padding: 0 40px;
+        }
+
+        @include onDesktop {
+            padding: 0 55px;
+        }
+    }
+
+    &__content {
+    position: relative;
+    height: 100vh;
+
+    // @include onDesktop {
+    //     padding-bottom: 50px;
+    // }
+
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+    }
 
     .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 20px 0;
+        margin-bottom: 50px;
+
+        @include onTablet {
+            padding: 25px 0;
+            margin-bottom: 100px;
+        }
+
         .language {
-            display: none;
+            // display: none;
         }
     }
     
@@ -19,8 +54,14 @@
         height: 40px;
     }
 
-    
+    &__actions {
+        display: flex;
+    }
+
     .burger {
+        cursor: pointer;
+        margin-left: 30px;
+
         &__item {
             height: 2px;
             width: 25px;
@@ -32,40 +73,161 @@
     }
 
     &__menu {
-        display: none;
-    }
-    .title {
-        margin-top: 70px;
+        margin: 40px auto;
 
-        &__sub {
-            font-size: 14px;
+        .info {
+
+            &__value {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
         }
 
-        &__text {
+        .links {
+            display: flex;
+            flex-direction: column;
+            margin: 40px auto;
+            
+            &__item {
+                font-family: $title-font;
+                font-size: 20px;
+                font-weight: 700;
+                color: $color-white;
+                text-decoration: none;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__breakline {
+        height: 1px;
+        width: 100%;
+        background: $color-white;
+    }
+
+
+    
+
+    
+
+    
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translatex(50%);
+        width: 245px;
+        height: auto;
+   
+        @include onTablet {
+            width: 443px;
+        }
+
+        @include onDesktop {
+            width: 625px;
+            right: calc(625px / 2 - 55px);
+            bottom: 0;
+        }
+    }
+
+    .hidden {
+        display: none;
+    };
+}
+
+.img-wrapper {
+    // box-sizing: border-box;
+}
+
+.main{
+    
+   
+
+    @include onDesktop {
+        height: calc(100% - 190px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+    
+    &__title {
+        margin-top: 70px;
+    
+        &-sub {
+            font-size: 14px;
+            margin: 0;
+        }
+    
+        &-text {
             font-size: 48px;
             margin: 10px 0 30px;
+            max-width: 400px;
+    
+            @include onTablet {
+                font-size: 72px;
+                max-width: 570px;
+            }
+            
+            @include onDesktop {
+                font-size: 96px;
+            }
         }
-
-        &__description {
+    
+        &-description {
+            margin: 0;
+            width: 250px;
+    
+            @include onTablet {
+                width: 330px;
+            }
+    
+            @include onDesktop {
+                width: auto;
+            }
         }
         
     }
 
-    &__btn {
+    &__button {
+        display: block;
         margin: 40px auto;
-        padding: 22px 0;
-        width: 280px;
-        text-align: center;
-        background: $btn-bg;
-        font-weight: 600;
+
+        @include onTablet {
+            width: 330px;
+            margin: 50px 0;
+        }
+
+        @include onDesktop {
+            width: 270px;
+        }
     }
 
-    &__img {
-        margin: 0 auto;
-        width: 245px;
-        height: 273px;
-        background-image: url('/src/images/header-tab.png');
-        background-size: cover;
+    &__date {
+        display: none;
+        position: relative;
+        font-family: $title-font;
+        font-weight: 700;
+        margin-bottom: 50px;
+        opacity: .7;
+
+        @include onDesktop{
+            display: block;
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 10.5px;
+                left: 110px;
+                width: 470px;
+                height: 1px;
+                background: $color-white;
+                opacity: .3;
+            }
+        }
+
     }
 
 }

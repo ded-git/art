@@ -1,12 +1,36 @@
 @import './utils/reset';
+@import './utils/variables.scss';
+@import './utils/mixins';
 @import './blocks/header.scss';
 
 html {
+    font-family: $common-font;
+    font-size: 16px;
     h1, h2, h3 {
         font-family: $title-font;
     }
-    font-family: $common-font;
-    font-size: 16px;
 }
 
+.primary-btn {
+    padding: 0;
+    color: $color-white;
+    background: $btn-bg;
+    cursor: pointer;
+    border: none;
+    width: 280px;
+    line-height: 60px;
+    font-weight: 600;
+    
 
+    &:hover {
+        background: #af3419;
+    }
+
+    &:active {
+        background: #ea340d;
+    }
+
+    &:disabled {
+        background: #dd836f;
+    }
+}
